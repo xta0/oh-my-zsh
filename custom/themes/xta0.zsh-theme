@@ -11,14 +11,14 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[yellow]%})"
 : #------------------------------
 _COLUMNS=$(tput cols)
 # Set default message if ( input not provided
-_MESSAGE=" FBI Warining "
+_MESSAGE=" 知行合一 "
 # Calculate x and y coordinates so that we can display $MESSAGE
 # centered in the screen
 y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
 spaces=$(printf "%-${y}s" " ")
 # Alright display message stored in $_MESSAGE
 echo " "
-echo -e "${spaces}\033[41;37;5m FBI WARNING \033[0m"
+echo -e "${spaces}\033[41;37;5m ${_MESSAGE} \033[0m"
 echo " "
 echo "Federal Law provides severe civil and criminal penalties for the unauthorized reproduction, distribution, or exhibition of copyrighted motion pictures (Title 17, United States Code, Sections 501 and 508). The Federal Bureau of Investigation investigates allegations of criminal copyright infringement"
 _COLUMNS=$(tput cols)
