@@ -7,28 +7,35 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%}) %{$fg[red]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[yellow]%})" 
 
-#FBI Warning:)
+
 : #------------------------------
-_COLUMNS=$(tput cols)
-# Set default message if ( input not provided
-_MESSAGE=" 知行合一 "
-# Calculate x and y coordinates so that we can display $MESSAGE
-# centered in the screen
-y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-spaces=$(printf "%-${y}s" " ")
-# Alright display message stored in $_MESSAGE
+_COLUMNS=$(tput cols) 
+
+_TITLE=" 知行合一"
+
+_TITLE_POS=$(( ( $_COLUMNS - ${#_TITLE} )  / 2 ))
+_TITLE_INDENT=$(printf "%-${_TITLE_POS}s" " ")
+
 echo " "
-echo -e "${spaces}\033[41;37;5m ${_MESSAGE} \033[0m"
+echo -e "${_TITLE_INDENT}\033[41;37;5m ${_TITLE} \033[0m"
 echo " "
-echo "Federal Law provides severe civil and criminal penalties for the unauthorized reproduction, distribution, or exhibition of copyrighted motion pictures (Title 17, United States Code, Sections 501 and 508). The Federal Bureau of Investigation investigates allegations of criminal copyright infringement"
-_COLUMNS=$(tput cols)
-# Set default message if ( input not provided
-_MESSAGE="(Title 17, United States Code, Section 506)."
-# Calculate x and y coordinates so that we can display $MESSAGE
-# centered in the screen
-y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
-spaces=$(printf "%-${y}s" " ")
-# Alright display message stored in $_MESSAGE
-echo -e "${spaces}(Title 17, United States Code, Section 506)."
+
+_MOTTOS=(
+    "The only way to do great work is to love what you do."
+    "Life is too short to be living somebody else's dream."
+    "Hello World!"
+)
+
+_MIN=1
+_MAX=${#_MOTTOS}
+_INDEX=$( jot -r 1 $_MIN $_MAX )
+_MOTTO=${_MOTTOS[$_INDEX]}
+
+_MOTTO_POS=$(( ( $_COLUMNS - ${#_MOTTO} )  / 2 ))
+_TITLE_INDENT=$(printf "%-${_MOTTO_POS}s" " ")
+
+
+echo " "
+echo -e "${_TITLE_INDENT}( '${_MOTTO}' )"
 echo " "
 : #------------------------------
