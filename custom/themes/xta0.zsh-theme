@@ -24,7 +24,7 @@ _MOTTOS=(
     "The only way to do great work is to love what you do."
     "Life is too short to be living somebody else's dream."
     "Hello World!"
-    "沧海一声笑，滔滔两岸潮，浮沉随浪，只记今朝。苍天笑，纷纷世上潮，谁负谁胜出，天知晓"
+    "苍天笑，纷纷世上潮，谁负谁胜出，天知晓"
 )
 
 _MIN=1
