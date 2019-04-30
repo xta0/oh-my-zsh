@@ -35,6 +35,6 @@ _MOTTO=${_MOTTOS[$_INDEX]}
 _MOTTO_POS=$(( ( $_COLUMNS - ${#_MOTTO} )  / 2 ))
 _TITLE_INDENT=$(printf "%-${_MOTTO_POS}s" " ")
 
-echo -e "${_TITLE_INDENT}( '${_MOTTO}' )"
-echo " "
-: #------------------------------
+# echo -e "${_TITLE_INDENT}( '${_MOTTO}' )"
+# echo " "
+#: #------------------------------
