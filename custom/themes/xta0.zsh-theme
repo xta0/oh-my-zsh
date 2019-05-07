@@ -20,6 +20,15 @@ echo " "
 echo -e "${_TITLE_INDENT}\033[41;37;5m ${_TITLE} \033[0m"
 echo " "
 
+echo "                                      ____
+                                 _[]_/____\__n_
+                                |_____.--.__()_|
+  You are now ready to focus    |    //# \\    |
+                                |    \\__//    |
+                                |     '--'     |
+                                '--------------'
+"
+
 _MOTTOS=(
     "The only way to do great work is to love what you do."
     "Life is too short to be living somebody else's dream."
